@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "BlenderPro";
+  font-weight: 300;
+  src: url("./fonts/BlenderPro-Book.woff2") format("opentype");
+}
+
+@font-face {
+  font-family: "BlenderPro";
+  font-weight: 700;
+  src: url("./fonts/BlenderPro-Bold.woff2") format("opentype");
+}
+
+body {
+  margin: 0;
+  font-family: "BlenderPro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

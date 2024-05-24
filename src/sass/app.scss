@@ -1,0 +1,20 @@
+@charset 'UTF-8';
+
+//base
+@import
+	'base/mixins',
+	'base/var',
+	'base/default';
+
+//components
+@import
+	'module/home',
+	'module/about',
+	'module/projects',
+	'module/contact';
+
+//layout
+@import
+'layout/footer',
+'layout/header';
+

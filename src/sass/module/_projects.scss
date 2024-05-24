@@ -1,0 +1,137 @@
+.projects{
+	.container{
+		margin: 0 auto;
+    max-width: 80rem;
+    padding: 0 2rem;
+		display: flex;
+		align-items: center;
+	}
+	.content{
+		align-items: center;
+    display: flex;
+		padding: 6rem 0 4rem;
+    position: relative;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.projects__title{
+		margin-bottom: 4rem;
+		h3{
+			display: block;
+			margin: 0 auto 1rem;
+			width: fit-content;
+			font-size: 4rem;
+			line-height: 1;
+			text-align: center;
+			font-weight: bold;
+			position: relative;
+				&::before{
+					content: "";
+					display: block;
+					margin: 0 auto;
+					width: 30%;
+					height: 2px;
+					left: 0;
+					bottom: -5px;
+					position: absolute;
+					background-color: $c-red;
+					transition: all .4s;
+				}
+		}
+		p{
+			display: block;
+			width: 100%;
+			font-size: 1.2rem;
+			text-align: center;
+			b{
+				color: $c-red;
+			}
+		}
+	}
+
+	.projects__box{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 2.5rem;
+		&__img{
+			width: 100%;
+			max-width: 40%;
+			flex: 0 0 40%;
+			img{
+				width: 100%;
+				object-fit: contain;
+				max-height: 400px;
+			}
+		}
+		&__content{
+			width: 100%;
+			max-width: 60%;
+			flex: 0 0 60%;
+			padding: 2rem 0 0 2rem;
+			span{
+				display: block;
+				font-size: 2rem;
+				font-weight: bold;
+				font-style: italic;
+				margin-bottom: .75rem;
+				b{
+					color: $c-red;
+				}
+			}
+			p{
+				font-size: 1.2rem;
+				margin-bottom: .5rem;
+				a, b{
+					color: $c-red;
+					font-weight: bold;
+				}
+			}
+		}
+		&:nth-child(odd){
+			.projects__box{
+				&__img{
+					order: 2;
+				}
+				&__content{
+					order: 1;
+				}
+			}
+		}
+	}
+	@media (max-width: $mq-md){
+		.content{
+			padding-top: 2.5rem;
+		}
+		.projects__title{
+			h3{
+				font-size: 2rem;
+			}
+		}
+		.projects__box{
+			&__img, &__content{
+				max-width: 100%;
+				flex: 0 0 100%;
+			}
+			&__img{
+				img{
+					height: 200px;
+				}
+			}
+			&__content{
+				padding-left: 0;
+			}
+			&:nth-child(odd){
+				.projects__box{
+					&__img{
+						order: 1;
+					}
+					&__content{
+						order: 2;
+					}
+				}
+			}
+		}
+	}
+}
